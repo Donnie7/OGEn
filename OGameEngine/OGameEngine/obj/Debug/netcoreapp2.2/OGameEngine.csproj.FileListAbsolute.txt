@@ -1,0 +1,11 @@
+C:\git\OGEn\OGameEngine\OGameEngine\bin\Debug\netcoreapp2.2\OGameEngine.deps.json
+C:\git\OGEn\OGameEngine\OGameEngine\bin\Debug\netcoreapp2.2\OGameEngine.runtimeconfig.json
+C:\git\OGEn\OGameEngine\OGameEngine\bin\Debug\netcoreapp2.2\OGameEngine.runtimeconfig.dev.json
+C:\git\OGEn\OGameEngine\OGameEngine\bin\Debug\netcoreapp2.2\OGameEngine.dll
+C:\git\OGEn\OGameEngine\OGameEngine\obj\Debug\netcoreapp2.2\OGameEngine.csprojAssemblyReference.cache
+C:\git\OGEn\OGameEngine\OGameEngine\obj\Debug\netcoreapp2.2\OGameEngine.csproj.CoreCompileInputs.cache
+C:\git\OGEn\OGameEngine\OGameEngine\obj\Debug\netcoreapp2.2\OGameEngine.AssemblyInfoInputs.cache
+C:\git\OGEn\OGameEngine\OGameEngine\obj\Debug\netcoreapp2.2\OGameEngine.AssemblyInfo.cs
+C:\git\OGEn\OGameEngine\OGameEngine\bin\Debug\netcoreapp2.2\OGameEngine.pdb
+C:\git\OGEn\OGameEngine\OGameEngine\obj\Debug\netcoreapp2.2\OGameEngine.dll
+C:\git\OGEn\OGameEngine\OGameEngine\obj\Debug\netcoreapp2.2\OGameEngine.pdb
