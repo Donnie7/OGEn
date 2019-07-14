@@ -14,6 +14,17 @@ namespace OGameEngine.Core
         public CrystalSilo CrystalSilo;
         public DeuteriumSilo DeuteriumSilo;
 
-        
+        public Resources()
+        {
+            MetalMine = new MetalMine();
+            CrystalMine = new CrystalMine();
+            DeuteriumMine = new DeuteriumMine();
+            PowerPlant = new PowerPlant();
+            FusionPlant = new FusionPlant();
+            SolarSatelite = new SolarSatelite();
+            MetalSilo = new MetalSilo();
+            CrystalSilo = new CrystalSilo();
+            DeuteriumSilo = new DeuteriumSilo();
+        }
     }
 }

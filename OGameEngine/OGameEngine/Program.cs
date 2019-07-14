@@ -16,9 +16,8 @@ namespace OGameEngine
             var ogame = new Ogame();
             ogame.Login(driver);
             driver.SwitchTo().Window(driver.WindowHandles[1]);
-            driver.FindElement(By.XPath("//*[@id=\"menuTable\"]/li[2]/a/span")).Click();
-            var message = driver.FindElement(By.XPath("//*[@id=\"message-wrapper\"]/a[1]/span")).Text;
-            
+            var crystalMineLevel = ogame.Resources.CrystalMine.CurrentLevel;
+
             Console.WriteLine("You dont have messages");
         }
 

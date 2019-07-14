@@ -12,3 +12,5 @@
 [0713/234104.223:ERROR:exception_snapshot_win.cc(98)] thread ID 19640 not found in process
 [0713/235242.387:ERROR:process_reader_win.cc(123)] NtOpenThread: {Acesso negado} Um processo pediu acesso a um objeto, mas não lhe foram concedidos permissões de acesso. (0xc0000022)
 [0713/235242.388:ERROR:exception_snapshot_win.cc(98)] thread ID 19640 not found in process
+[0714/155230.599:ERROR:process_reader_win.cc(123)] NtOpenThread: {Acesso negado} Um processo pediu acesso a um objeto, mas não lhe foram concedidos permissões de acesso. (0xc0000022)
+[0714/155230.602:ERROR:exception_snapshot_win.cc(98)] thread ID 10392 not found in process
