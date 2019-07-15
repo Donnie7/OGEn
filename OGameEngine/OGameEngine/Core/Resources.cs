@@ -1,4 +1,5 @@
 ﻿using OGameEngine.Core.ResourceBuildings;
+using OGameEngine.Webdriver;
 
 namespace OGameEngine.Core
 {
@@ -25,6 +26,11 @@ namespace OGameEngine.Core
             MetalSilo = new MetalSilo();
             CrystalSilo = new CrystalSilo();
             DeuteriumSilo = new DeuteriumSilo();
+        }
+
+        public void Navigate()
+        {
+         
         }
     }
 }
