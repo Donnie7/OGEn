@@ -12,7 +12,7 @@ namespace OGameEngine
         {
             var ogame = new Ogame();
             ogame.Login();
-            ogame.Resources.Navigate()
+            ogame.Resources.Navigate();
             var crystalMineLevel = ogame.Resources.CrystalMine.CurrentLevel;
 
             Console.WriteLine("You dont have messages");

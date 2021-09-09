@@ -15,7 +15,7 @@ namespace OGameEngine.Webdriver.OgameEntities
 
         public void Navigate()
         {
-            var element = Driver.Current.FindElement(By.XPath(Path));
+            var element = new Driver().Current.FindElement(By.XPath(Path));
             element.Click();
         }
     }

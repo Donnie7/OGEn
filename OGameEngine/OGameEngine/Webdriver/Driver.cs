@@ -7,7 +7,7 @@ namespace OGameEngine.Webdriver
 {
     public class Driver
     {
-        public static IWebDriver Current;
+        public  IWebDriver Current;
         
         public Driver()
         {
