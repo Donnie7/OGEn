@@ -6,7 +6,7 @@
     {
         public string Name { get; }
         public IEnumerable<Planet> Planets { get; }
-        public Research Research { get; }
-        public Alliance Alliance { get; }
+        // public Research Research { get; }
+        // public Alliance Alliance { get; }
     }
 }

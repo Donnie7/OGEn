@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28729.10
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OGameEngine", "OGameEngine\OGameEngine.csproj", "{AC21CEC4-084C-4B56-BAEA-A1B154BA0765}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OGameEngine", "OGameEngine\OGameEngine.csproj", "{AC21CEC4-084C-4B56-BAEA-A1B154BA0765}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{F1D4CAB7-C789-4BFE-B457-A2560BDD50E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{F1D4CAB7-C789-4BFE-B457-A2560BDD50E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OGenDash", "OGenDash\OGenDash.csproj", "{2D12B12C-9568-4FB3-A3AA-55977FCB6180}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{F1D4CAB7-C789-4BFE-B457-A2560BDD50E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1D4CAB7-C789-4BFE-B457-A2560BDD50E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1D4CAB7-C789-4BFE-B457-A2560BDD50E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D12B12C-9568-4FB3-A3AA-55977FCB6180}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D12B12C-9568-4FB3-A3AA-55977FCB6180}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D12B12C-9568-4FB3-A3AA-55977FCB6180}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D12B12C-9568-4FB3-A3AA-55977FCB6180}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
