@@ -3,8 +3,8 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:6880",
-      "sslPort": 44308
+      "applicationUrl": "http://localhost:23807",
+      "sslPort": 44334
     }
   },
   "profiles": {
@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "OGenDash": {
+    "WebApplication": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
       "launchBrowser": true,

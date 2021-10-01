@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <TargetFramework>net5.0</TargetFramework>
-        <UserSecretsId>aspnet-OGenDash-2C930764-9F0E-49FC-8671-01C74694FB17</UserSecretsId>
+        <UserSecretsId>aspnet-WebApplication-6CBBDE02-D012-4D23-AF1E-B5062D7F21D7</UserSecretsId>
         <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
     </PropertyGroup>
 
@@ -14,7 +14,6 @@
         <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="5.0.10" />
         <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.10" />
         <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="5.0.10" />
-        <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.10" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.10" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.10" />
     </ItemGroup>
