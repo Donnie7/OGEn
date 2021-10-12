@@ -12,6 +12,9 @@ using OGenDash.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using OGameEngine.Core;
+using OGameEngine.Core.Interfaces;
+using OGameEngine.Webdriver;
 
 namespace OGenDash
 {
@@ -35,6 +38,9 @@ namespace OGenDash
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
+
+            services.AddSingleton<IDriver, Driver>();
+            services.AddSingleton<IOgame, Ogame>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

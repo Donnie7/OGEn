@@ -1,9 +1,23 @@
-﻿@{
+﻿@model HomeModel
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="main-panel">
     <div class="content-wrapper">
+        <div class="row">
+            <div class="col-xl-3 col-xl-6 grid-margin stretch-card">
+                <form method="post" asp-action="UpdateResearches">
+                    <button type="submit" value="1" class="btn btn-warning btn-fw">Actualizar</button>
+                </form>
+            </div>
+            <div class="col-xl-3 col-xl-6 grid-margin stretch-card">
+                <form method="post" asp-action="GoHome">
+                    <button type="submit" class="btn btn-warning btn-fw">Home</button>
+                </form>
+            </div>
+        </div>
+
         <div class="row">
             <div class="col-xl-3 col-xl-6 grid-margin stretch-card">
                 <div class="card">
@@ -23,19 +37,19 @@
                             <div class="col-sm-auto">
                                 <div class="d-flex align-items-center align-self-start">
                                     <h6 class="mb-0">Armas</h6>
-                                    <p class="text-info ml-2 mb-0 font-weight-medium"> 13</p>
+                                    <p class="text-info ml-2 mb-0 font-weight-medium"> @Model.Researches.WeaponsLevel</p>
                                 </div>
                             </div>
                             <div class="col-sm-auto">
                                 <div class="d-flex align-items-center align-self-start">
                                     <h6 class="mb-0">Escudo</h6>
-                                    <p class="text-info ml-2 mb-0 font-weight-medium"> 13</p>
+                                    <p class="text-info ml-2 mb-0 font-weight-medium"> @Model.Researches.ShieldingLevel</p>
                                 </div>
                             </div>
                             <div class="col-sm-auto">
                                 <div class="d-flex align-items-center align-self-start">
                                     <h6 class="mb-0">Blindagem</h6>
-                                    <p class="text-info ml-2 mb-0 font-weight-medium"> 13</p>
+                                    <p class="text-info ml-2 mb-0 font-weight-medium"> @Model.Researches.ArmorLevel</p>
                                 </div>
                             </div>
                         </div>
@@ -46,19 +60,19 @@
                             <div class="col-sm-auto">
                                 <div class="d-flex align-items-center align-self-start">
                                     <h6 class="mb-0">Combustão</h6>
-                                    <p class="text-info ml-2 mb-0 font-weight-medium"> 13</p>
+                                    <p class="text-info ml-2 mb-0 font-weight-medium"> @Model.Researches.CombustionLevel</p>
                                 </div>
                             </div>
                             <div class="col-sm-auto">
                                 <div class="d-flex align-items-center align-self-start">
                                     <h6 class="mb-0">Impulsão</h6>
-                                    <p class="text-info ml-2 mb-0 font-weight-medium"> 13</p>
+                                    <p class="text-info ml-2 mb-0 font-weight-medium"> @Model.Researches.ImpulsionLevel</p>
                                 </div>
                             </div>
                             <div class="col-sm-auto">
                                 <div class="d-flex align-items-center align-self-start">
                                     <h6 class="mb-0">Hiperespaço</h6>
-                                    <p class="text-info ml-2 mb-0 font-weight-medium"> 13</p>
+                                    <p class="text-info ml-2 mb-0 font-weight-medium"> @Model.Researches.HyperspacePropulsionLevel</p>
                                 </div>
                             </div>
                         </div>
@@ -69,31 +83,31 @@
                             <div class="col-sm-auto">
                                 <div class="d-flex align-items-center align-self-start">
                                     <h6 class="mb-0">Espionagem</h6>
-                                    <p class="text-info ml-2 mb-0 font-weight-medium"> 13</p>
+                                    <p class="text-info ml-2 mb-0 font-weight-medium"> @Model.Researches.SpyLevel</p>
                                 </div>
                             </div>
                             <div class="col-sm-auto">
                                 <div class="d-flex align-items-center align-self-start">
                                     <h6 class="mb-0">Computadores</h6>
-                                    <p class="text-info ml-2 mb-0 font-weight-medium"> 13</p>
+                                    <p class="text-info ml-2 mb-0 font-weight-medium"> @Model.Researches.ComputersLevel</p>
                                 </div>
                             </div>
                             <div class="col-sm-auto">
                                 <div class="d-flex align-items-center align-self-start">
                                     <h6 class="mb-0">Astrofísica</h6>
-                                    <p class="text-info ml-2 mb-0 font-weight-medium"> 13</p>
+                                    <p class="text-info ml-2 mb-0 font-weight-medium"> @Model.Researches.AstrophysicsLevel</p>
                                 </div>
                             </div>
                             <div class="col-sm-auto">
                                 <div class="d-flex align-items-center align-self-start">
                                     <h6 class="mb-0">Intergalática</h6>
-                                    <p class="text-info ml-2 mb-0 font-weight-medium"> 13</p>
+                                    <p class="text-info ml-2 mb-0 font-weight-medium"> @Model.Researches.IntergalacticLevel</p>
                                 </div>
                             </div>
                             <div class="col-sm-auto">
                                 <div class="d-flex align-items-center align-self-start">
                                     <h6 class="mb-0">Gravitação</h6>
-                                    <p class="text-info ml-2 mb-0 font-weight-medium"> 13</p>
+                                    <p class="text-info ml-2 mb-0 font-weight-medium"> @Model.Researches.GravitationLevel</p>
                                 </div>
                             </div>
                         </div>
@@ -104,173 +118,44 @@
                             <div class="col-sm-auto">
                                 <div class="d-flex align-items-center align-self-start">
                                     <h6 class="mb-0">Energia</h6>
-                                    <p class="text-info ml-2 mb-0 font-weight-medium"> 13</p>
+                                    <p class="text-info ml-2 mb-0 font-weight-medium"> @Model.Researches.EnergyLevel</p>
                                 </div>
                             </div>
                             <div class="col-sm-auto">
                                 <div class="d-flex align-items-center align-self-start">
                                     <h6 class="mb-0">Laser</h6>
-                                    <p class="text-info ml-2 mb-0 font-weight-medium"> 13</p>
+                                    <p class="text-info ml-2 mb-0 font-weight-medium"> @Model.Researches.LaserLevel</p>
                                 </div>
                             </div>
                             <div class="col-sm-auto">
                                 <div class="d-flex align-items-center align-self-start">
                                     <h6 class="mb-0">Iões</h6>
-                                    <p class="text-info ml-2 mb-0 font-weight-medium"> 13</p>
+                                    <p class="text-info ml-2 mb-0 font-weight-medium"> @Model.Researches.IonLevel</p>
                                 </div>
                             </div>
                             <div class="col-sm-auto">
                                 <div class="d-flex align-items-center align-self-start">
                                     <h6 class="mb-0">Hiperespaço</h6>
-                                    <p class="text-info ml-2 mb-0 font-weight-medium"> 13</p>
+                                    <p class="text-info ml-2 mb-0 font-weight-medium"> @Model.Researches.HyperspaceLevel</p>
                                 </div>
                             </div>
                             <div class="col-sm-auto">
                                 <div class="d-flex align-items-center align-self-start">
                                     <h6 class="mb-0">Plasma</h6>
-                                    <p class="text-info ml-2 mb-0 font-weight-medium"> 13</p>
+                                    <p class="text-info ml-2 mb-0 font-weight-medium"> @Model.Researches.PlasmaLevel</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="card">
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-auto">
-                                                <div class="d-flex align-items-center align-self-start  mb-4">
-                                                    <h3>Player</h3>
-                                                    <h4 class="text-success ml-2 mb-1 font-weight-medium">Donnie</h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <h6 class="text-muted ml-0 font-weight-normal">Pesquisas de Combate</h6>
-                                        </div>
-                                        <div class="row mb-4">
-                                            <div class="col-sm-auto">
-                                                <div class="d-flex align-items-center align-self-start">
-                                                    <h6 class="mb-0">Armas</h6>
-                                                    <p class="text-info ml-2 mb-0 font-weight-medium"> 13</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-auto">
-                                                <div class="d-flex align-items-center align-self-start">
-                                                    <h6 class="mb-0">Escudo</h6>
-                                                    <p class="text-info ml-2 mb-0 font-weight-medium"> 13</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-auto">
-                                                <div class="d-flex align-items-center align-self-start">
-                                                    <h6 class="mb-0">Blindagem</h6>
-                                                    <p class="text-info ml-2 mb-0 font-weight-medium"> 13</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <h6 class="text-muted ml-0 font-weight-normal">Pesquisas de Motores</h6>
-                                        </div>
-                                        <div class="row mb-4">
-                                            <div class="col-sm-auto">
-                                                <div class="d-flex align-items-center align-self-start">
-                                                    <h6 class="mb-0">Combustão</h6>
-                                                    <p class="text-info ml-2 mb-0 font-weight-medium"> 13</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-auto">
-                                                <div class="d-flex align-items-center align-self-start">
-                                                    <h6 class="mb-0">Impulsão</h6>
-                                                    <p class="text-info ml-2 mb-0 font-weight-medium"> 13</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-auto">
-                                                <div class="d-flex align-items-center align-self-start">
-                                                    <h6 class="mb-0">Hiperespaço</h6>
-                                                    <p class="text-info ml-2 mb-0 font-weight-medium"> 13</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <h6 class="text-muted ml-0 font-weight-normal">Pesquisas Avançadas</h6>
-                                        </div>
-                                        <div class="row mb-4">
-                                            <div class="col-sm-auto">
-                                                <div class="d-flex align-items-center align-self-start">
-                                                    <h6 class="mb-0">Espionagem</h6>
-                                                    <p class="text-info ml-2 mb-0 font-weight-medium"> 13</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-auto">
-                                                <div class="d-flex align-items-center align-self-start">
-                                                    <h6 class="mb-0">Computadores</h6>
-                                                    <p class="text-info ml-2 mb-0 font-weight-medium"> 13</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-auto">
-                                                <div class="d-flex align-items-center align-self-start">
-                                                    <h6 class="mb-0">Astrofísica</h6>
-                                                    <p class="text-info ml-2 mb-0 font-weight-medium"> 13</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-auto">
-                                                <div class="d-flex align-items-center align-self-start">
-                                                    <h6 class="mb-0">Intergalática</h6>
-                                                    <p class="text-info ml-2 mb-0 font-weight-medium"> 13</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-auto">
-                                                <div class="d-flex align-items-center align-self-start">
-                                                    <h6 class="mb-0">Gravitação</h6>
-                                                    <p class="text-info ml-2 mb-0 font-weight-medium"> 13</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <h6 class="text-muted ml-0 font-weight-normal">Pesquisas Básicas</h6>
-                                        </div>
-                                        <div class="row mb-4">
-                                            <div class="col-sm-auto">
-                                                <div class="d-flex align-items-center align-self-start">
-                                                    <h6 class="mb-0">Energia</h6>
-                                                    <p class="text-info ml-2 mb-0 font-weight-medium"> 13</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-auto">
-                                                <div class="d-flex align-items-center align-self-start">
-                                                    <h6 class="mb-0">Laser</h6>
-                                                    <p class="text-info ml-2 mb-0 font-weight-medium"> 13</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-auto">
-                                                <div class="d-flex align-items-center align-self-start">
-                                                    <h6 class="mb-0">Iões</h6>
-                                                    <p class="text-info ml-2 mb-0 font-weight-medium"> 13</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-auto">
-                                                <div class="d-flex align-items-center align-self-start">
-                                                    <h6 class="mb-0">Hiperespaço</h6>
-                                                    <p class="text-info ml-2 mb-0 font-weight-medium"> 13</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-auto">
-                                                <div class="d-flex align-items-center align-self-start">
-                                                    <h6 class="mb-0">Plasma</h6>
-                                                    <p class="text-info ml-2 mb-0 font-weight-medium"> 13</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
             </div>
         </div>
+
     </div>
     <!-- content-wrapper ends -->
     <!-- partial:partials/_footer.html -->
     <footer class="footer">
         <div class="d-sm-flex justify-content-center justify-content-sm-between">
-            <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © bootstrapdash.com 2020</span>
-            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Free <a href="https://www.bootstrapdash.com/bootstrap-admin-template/" target="_blank">Bootstrap admin templates</a> from Bootstrapdash.com</span>
         </div>
     </footer>
     <!-- partial -->

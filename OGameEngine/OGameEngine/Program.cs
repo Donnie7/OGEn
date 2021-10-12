@@ -1,8 +1,4 @@
-﻿using OGameEngine.Core;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using System;
-using System.IO;
+﻿using System;
 
 namespace OGameEngine
 {
@@ -10,10 +6,9 @@ namespace OGameEngine
     {
         static void Main(string[] args)
         {
-            var ogame = new Ogame();
-            ogame.Login();
-            ogame.Resources.Navigate();
-            var crystalMineLevel = ogame.Resources.CrystalMine.CurrentLevel;
+            // var ogame = new Ogame();
+            // ogame.Resources.Navigate();
+            // var crystalMineLevel = ogame.Resources.CrystalMine.CurrentLevel;
 
             Console.WriteLine("You dont have messages");
         }
