@@ -34,8 +34,7 @@ namespace OGenDash.Controllers
         [HttpPost]
         public IActionResult ConnectToOgame()
         {
-            driver.ConnectToOgame();
-            ogame.Connected = true;
+            ogame.Connected = driver.ConnectToOgame();
             var model = ogame.ToModel();
             return RedirectToAction("Index", model);
         }

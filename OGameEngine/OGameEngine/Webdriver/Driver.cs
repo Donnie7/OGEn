@@ -19,16 +19,18 @@ namespace OGameEngine.Webdriver
             Researches = new Researches(this);
         }
 
-        public void ConnectToOgame()
+        public bool ConnectToOgame()
         {
             foreach (var tab in Current.WindowHandles)
             {
                 Current.SwitchTo().Window(tab);
-                if (Current.Title.Contains("PT Hyperion"))
+                if (Current.Title.Contains("Hyperion"))
                 {
-                    break;
+                    return true;
                 }
             }
+
+            return false;
             // Current.Url = "https://lobby.ogame.gameforge.com/pt_PT/";
             // Current.FindElement(By.XPath(Path.Login.SessionTab)).Click();
             // Current.FindElement(By.XPath(Path.Login.UsernameForm)).SendKeys("alt.mail.16@gmail.com");
@@ -51,7 +53,7 @@ namespace OGameEngine.Webdriver
     
     public interface IDriver
     {
-        void ConnectToOgame();
+        bool ConnectToOgame();
         void GoTo(string url);
 
         string GetValue(string xpath);
