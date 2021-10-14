@@ -1,12 +1,13 @@
-﻿using OGameEngine.Core.Interfaces;
+﻿using System.Linq;
+using OGameEngine.Core.Interfaces;
 
 namespace OGenDash.Models
 {
     public static class Extensions
     {
-        public static HomeModel ToModel(this IOgame ogame)
+        public static OgameModel ToModel(this IOgame ogame)
         {
-            return new HomeModel
+            return new OgameModel
             {
                 Connected = ogame.Connected,
                 Researches = new Researches
@@ -27,7 +28,8 @@ namespace OGenDash.Models
                     WeaponsLevel = ogame.Researches.WeaponsLevel,
                     ShieldingLevel = ogame.Researches.ShieldingLevel,
                     ArmorLevel = ogame.Researches.ArmorLevel
-                }
+                },
+                Planets = ogame.Planets.Select(x => new Planet{ Name = x.Name, Location = x.Location })
             };
         }
     }

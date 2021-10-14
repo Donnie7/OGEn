@@ -1,14 +1,26 @@
-﻿namespace OGenDash.Models
+﻿using System.Collections.Generic;
+
+namespace OGenDash.Models
 {
-    public class HomeModel
+    public class OgameModel
     {
-        public HomeModel()
-        {
-            Researches = new Researches();
-        }
 
         public bool Connected { get; set; }
         public Researches Researches { get; set; }
+        public IEnumerable<Planet> Planets { get; set; }
+
+        public OgameModel()
+        {
+            Researches = new Researches();
+            Planets = new List<Planet>();
+        }
+    }
+
+    public class Planet
+    {
+        public string Name { get; set; }
+        public string Location { get; set; }
+        public string Moon { get; set; }
     }
 
     public class Researches

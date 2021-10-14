@@ -1,6 +1,8 @@
 ﻿using System.Diagnostics;
+using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using OGameEngine.Core;
 using OGameEngine.Core.Interfaces;
 using OGameEngine.Webdriver;
 using OGenDash.Models;
@@ -40,6 +42,14 @@ namespace OGenDash.Controllers
         }
         
         [HttpPost]
+        public IActionResult GoToPlanet()
+        {
+            driver.GoTo("https://s134-pt.ogame.gameforge.com/game/index.php?page=ingame&component=overview");
+            var model = ogame.ToModel();
+            return Json("");
+        }
+
+        [HttpPost]
         public IActionResult GoHome()
         {
             driver.GoTo("https://s134-pt.ogame.gameforge.com/game/index.php?page=ingame&component=overview");
@@ -67,6 +77,13 @@ namespace OGenDash.Controllers
             ogame.Researches.WeaponsLevel = driver.Researches.GetWeaponsLevel();
             ogame.Researches.ShieldingLevel = driver.Researches.GetShieldingLevel();
             ogame.Researches.ArmorLevel = driver.Researches.GetArmorLevel();
+            return RedirectToAction("Index");
+        }
+        
+        [HttpPost]
+        public IActionResult UpdatePlanets()
+        {
+            ogame.Planets = driver.GetPlanets().Select(x => new OGameEngine.Core.Planet{ Name = x.Name, Location = x.Location });
             return RedirectToAction("Index");
         }
 

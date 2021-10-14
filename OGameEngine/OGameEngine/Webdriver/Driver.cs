@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using OGameEngine.Core;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
@@ -8,7 +11,7 @@ namespace OGameEngine.Webdriver
     {
         public  IWebDriver Current { get; }
         public IResearches Researches { get; }
-        
+
         public Driver()
         {
             var options = new ChromeOptions();
@@ -31,14 +34,6 @@ namespace OGameEngine.Webdriver
             }
 
             return false;
-            // Current.Url = "https://lobby.ogame.gameforge.com/pt_PT/";
-            // Current.FindElement(By.XPath(Path.Login.SessionTab)).Click();
-            // Current.FindElement(By.XPath(Path.Login.UsernameForm)).SendKeys("alt.mail.16@gmail.com");
-            // Current.FindElement(By.XPath(Path.Login.PasswordForm)).SendKeys("naosei_534");
-            // Current.FindElement(By.XPath(Path.Login.LoginButton)).Click();
-            // Current.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
-            // Current.FindElement(By.XPath(Path.Login.LastPlayedButton)).Click();
-            // Current.SwitchTo().Window(Current.WindowHandles[1]);
         }
 
         public void GoTo(string url)
@@ -48,16 +43,15 @@ namespace OGameEngine.Webdriver
 
         public string GetValue(string xpath) => Current.FindElement(By.XPath(xpath)).Text;
 
-        public IWebDriver CurrentDriver() => Current;
-    }
-    
-    public interface IDriver
-    {
-        bool ConnectToOgame();
-        void GoTo(string url);
+        public IEnumerable<Planet> GetPlanets()
+        {
+            var planetList = Current.FindElement(By.XPath("//*[@id=\"planetList\"]"));
+            var planets = planetList.FindElements(By.XPath("//*[contains(@id, 'planet-')]"));
 
-        string GetValue(string xpath);
-
-        IResearches Researches { get; }
+            return planets
+                .Select(planet => planet.Text.Split(new[] {"\r\n", "\r", "\n"}, StringSplitOptions.None))
+                .Select(values => new Planet {Name = values[0], Location = values[1]})
+                .ToList();
+        }
     }
 }
